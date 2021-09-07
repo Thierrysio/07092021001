@@ -17,6 +17,7 @@ namespace _07092021001
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            //////:
         }
     }
 }

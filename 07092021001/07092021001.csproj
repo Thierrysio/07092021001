@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modeles\Borne.cs" />
+    <Compile Include="Modeles\Maintenance.cs" />
+    <Compile Include="Modeles\Station.cs" />
+    <Compile Include="Modeles\Technicien.cs" />
+    <Compile Include="Modeles\TypeBorne.cs" />
+    <Compile Include="Modeles\Visite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -76,8 +82,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modeles\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

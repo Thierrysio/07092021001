@@ -44,7 +44,7 @@ namespace _07092021001.Modeles
         public void affecterVisite(Visite uneVisite)
         {
             uneVisite.changerEtat();
-            uneVisite.getDureeTotal();
+            //uneVisite.getDureeTotal();
             this._lesVisites.Add(uneVisite);
         }
         public List<Visite> getLesVisites()

@@ -50,7 +50,7 @@ namespace _07092021001.Modeles
         }
         public bool estAReviser()
         {
-            if ((this._indiceCompteurUnites > LeType.getNbUnitesRevisions() ) || ((int)(DateTime.Now - this.DateDerniereRevision).TotalDays > this.LeType.getNbJoursEntreRevisions()))
+            if ((this._indiceCompteurUnites > this.LeType.getNbUnitesRevisions() ) || ((int)(DateTime.Now - this.DateDerniereRevision).TotalDays > this.LeType.getNbJoursEntreRevisions()))
             {
                 return true;
             }

@@ -45,18 +45,23 @@ namespace _07092021001.Modeles
         }
         public void AffecterVisites()
         {
-            Technicien t = this.LesTechniciens[0];
-            foreach (Visite uneVisite in this.LesVisites)
+            Technicien technicienRetenu = null;
+            
+            int tempsVisiteMoinsOccupe = int.MaxValue;
+
+            foreach( Visite uneVisite in this.LesVisites)
             {
-                foreach (Technicien unTechnicien in this.LesTechniciens)
+                foreach(Technicien unTechnicien in Technicien.CollClasse)
                 {
-                    if (unTechnicien.getLesVisites().Count < t.getLesVisites().Count)
+                    if(unTechnicien.getTempsOccupe()< tempsVisiteMoinsOccupe)
                     {
-                        t = unTechnicien;
+                        technicienRetenu = unTechnicien;
+                        tempsVisiteMoinsOccupe = unTechnicien.getTempsOccupe();
                     }
                 }
-                t.affecterVisite(uneVisite);
+                technicienRetenu.affecterVisite(uneVisite);
             }
+            
         }
         #endregion
     }

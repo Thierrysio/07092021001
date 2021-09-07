@@ -21,5 +21,16 @@ namespace _07092021001.Modeles.Tests
             ///Assert
             Assert.AreEqual(1, resultat);
         }
+
+        [TestMethod()]
+        public void getLibelleEmplacementTest()
+        {
+            ///Jeu d'essai
+            Station S1 = new Station(1, "emplacement1");
+            ///Methode
+            string resultat = S1.getLibelleEmplacement();
+            ///Assert
+            Assert.AreEqual("emplacement1", resultat);
+        }
     }
 }

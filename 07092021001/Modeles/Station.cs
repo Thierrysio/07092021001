@@ -37,6 +37,10 @@ namespace _07092021001.Modeles
         {
             return this._idStation;
         }
+        /// <summary>
+        /// 01 - Recuperer le libelle de l'objet courant
+        /// </summary>
+        /// <returns>le libelle de l'emplacement de l'objet courant</returns>
         public string getLibelleEmplacement()
         {
             return this._libelleEmplacement;

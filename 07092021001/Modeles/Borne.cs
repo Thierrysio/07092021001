@@ -32,13 +32,25 @@ namespace _07092021001.Modeles
         public TypeBorne LeType { get => _leType; set => _leType = value; }
         #endregion
         #region Méthodes
+
+        public int Get500()
+        {
+            foreach(Borne uneBorne in Borne.CollClasse)
+            {
+                if(uneBorne.IdBorne == 500)
+                {
+                    return uneBorne.IdBorne;
+                }
+            }
+            return 0;
+        }
         public int getDureeRevision()
         {
             return this.LeType.getDureeRevision();
         }
         public bool estAReviser()
         {
-            if ((this._indiceCompteurUnites > this.LeType.getNbJoursEntreRevisions()) || ((int)(DateTime.Now - this.DateDerniereRevision).TotalDays > LeType.getNbUnitesRevisions()))
+            if ((this._indiceCompteurUnites > LeType.getNbUnitesRevisions() ) || ((int)(DateTime.Now - this.DateDerniereRevision).TotalDays > this.LeType.getNbJoursEntreRevisions()))
             {
                 return true;
             }
